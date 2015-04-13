@@ -35,6 +35,7 @@ group :development, :test do
   gem "bundler-audit", require: false
   gem "byebug"
   gem "factory_girl_rails"
+  gem "faker"
   gem "pry-rails"
   gem "rspec-rails", "~> 3.1.0"
 end

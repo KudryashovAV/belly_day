@@ -3,7 +3,7 @@ class CreateAccounts < ActiveRecord::Migration
     create_table :accounts do |t|
       t.string  :name
       t.integer :age
-      t.integer :sex
+      t.string :sex
       t.integer :weight
       t.integer :growth
       t.integer :hips
