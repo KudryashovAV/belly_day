@@ -1,19 +1,17 @@
 class AccountsController < ApplicationController
-	def index
-    @accounts = Account.all
-  end
+  before_action :authenticate_user!
 
   def show
-    @account = Account.find(params[:id])
+    @account = current_user.account
   end
 
   def new
-    @account = Account.new
+    @account = current_user.build_account
   end
 
   def create
-    account = Account.create account_params
-    redirect_to account_path account
+    account = current_user.create_account(account_params)
+    redirect_to account_path(account)
   end
 
   private

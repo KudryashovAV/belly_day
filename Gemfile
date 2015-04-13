@@ -21,6 +21,7 @@ gem "simple_form"
 gem "title"
 gem "uglifier"
 gem 'haml'
+gem 'devise'
 
 group :development do
   gem "spring"

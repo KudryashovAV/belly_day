@@ -9,7 +9,8 @@ class CreateAccounts < ActiveRecord::Migration
       t.integer :hips
       t.integer :waist
 
-      t.timestamps null: false
+      t.belongs_to :user
+      t.timestamps
     end
   end
 end
