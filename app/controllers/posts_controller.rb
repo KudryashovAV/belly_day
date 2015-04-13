@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
 
-  def show
-    @post = Post.order("RANDOM()"). first
+  def index
+    @posts = Post.all
   end
 
   private
