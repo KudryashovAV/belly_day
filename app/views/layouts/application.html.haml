@@ -17,7 +17,10 @@
           .col-sm-6.col-sm-offset-3.text-center
             = render 'flashes'
         .row
-          .col-sm-12
+          .col-sm-3
+          .col-sm-6
             = yield
+          .col-sm-3
+            = render 'info'
     = render 'footer'
     = render 'javascript'
