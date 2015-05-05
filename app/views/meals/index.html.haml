@@ -1,0 +1,17 @@
+.row
+  .col-md-12= link_to 'Add new meal', products_path
+-if @meals.any?
+  - @meals.each do |meal|
+    .row
+      .col-md-4
+      .col-md-4= meal.ingestion
+    .row
+      .col-md-4= meal.product.title
+      .col-md-4= meal.weight
+      - food_profit([meal]).each do |key, value|
+        .col-md-4= "#{key}: #{value}"
+
+  .h2 Total
+  .row
+    - food_profit(@meals).each do |key, value|
+      .col-md-4= "#{key}: #{value}"

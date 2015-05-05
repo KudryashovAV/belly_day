@@ -1,5 +1,4 @@
 class AccountsController < ApplicationController
-  before_action :authenticate_user!
 
   def show
     @account = current_user.account
@@ -11,7 +10,7 @@ class AccountsController < ApplicationController
 
   def create
     account = current_user.create_account(account_params)
-    redirect_to account_path(account)
+    redirect_to meals_path
   end
 
   private
