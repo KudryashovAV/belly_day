@@ -16,6 +16,7 @@ gem "simple_form"
 gem "thin"
 gem "uglifier"
 gem "anadea-identity"
+gem "haml"
 
 group :development do
   gem "spring"
