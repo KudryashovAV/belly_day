@@ -1,9 +1,4 @@
 Rails.application.routes.draw do
-  root 'posts#index'
-  devise_for :users
-  resources :accounts, only: [:new, :create, :edit, :update, :show]
-  resources :meals, only: [:index]
-  resources :products do
-    resources :meals, only: [:new, :create]
-  end
+  mount JasmineRails::Engine => '/specs' if defined?(JasmineRails)
+  root 'high_voltage/pages#show', id: 'home'
 end

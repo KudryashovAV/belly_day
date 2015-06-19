@@ -1,33 +1,25 @@
 source "https://rubygems.org"
 
-ruby "2.2.1"
+ruby "2.2.2"
 
 gem "bootstrap-sass", "~> 3.3.4"
-gem "coffee-rails", "~> 4.1.0"
 gem "delayed_job_active_record"
 gem "email_validator"
+gem "exception_notification"
 gem "figaro"
 gem "high_voltage"
-gem "i18n-tasks"
 gem "jquery-rails"
-gem "newrelic_rpm", ">= 3.9.8"
 gem "pg"
-gem "puma"
-gem "rack-timeout"
 gem "rails", "4.2.1"
-gem "recipient_interceptor"
 gem "sass-rails", "~> 5.0"
 gem "simple_form"
-gem "title"
+gem "thin"
 gem "uglifier"
-gem 'haml'
-gem 'devise'
 
 group :development do
   gem "spring"
   gem "spring-commands-rspec"
   gem "web-console"
-  gem "erb2haml"
 end
 
 group :development, :test do
@@ -35,9 +27,9 @@ group :development, :test do
   gem "bundler-audit", require: false
   gem "byebug"
   gem "factory_girl_rails"
-  gem "faker"
   gem "pry-rails"
   gem "rspec-rails", "~> 3.1.0"
+  gem "jasmine-rails"
 end
 
 group :test do
@@ -45,7 +37,7 @@ group :test do
   gem "formulaic"
   gem "launchy"
   gem "poltergeist"
-  gem "shoulda-matchers", require: false
+  gem "simplecov", require: false
   gem "timecop"
   gem "webmock"
 end
