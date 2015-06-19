@@ -1,0 +1,11 @@
+%ul.nav.navbar-nav.navbar-right
+  - if user_signed_in?
+    %li.dropdown
+      = link_to('#', class: 'dropdown-toggle', data: {toggle: 'dropdown'}, role: 'button', 'aria-expanded' => 'false') do
+        = current_user.signable.try(:name) || t('application.account_is_empty')
+        %span.caret
+      %ul.dropdown-menu{role: 'menu'}
+        %li.divider
+        %li= link_to t("devise.shared.links.sign_out"), destroy_user_session_path
+  - else
+    %li= link_to t("devise.shared.links.sign_in"), new_user_session_path
