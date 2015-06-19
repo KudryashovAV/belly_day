@@ -9,6 +9,7 @@
     = stylesheet_link_tag :application, media: "all"
     = csrf_meta_tags
   %body
+    = render 'modal_container'
     #wrap
       %header
         = render 'navigation'
