@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/marvindanig/threejs-rails.git
+  revision: 15a9e69339f703a350412966d2e22a6dec135248
+  specs:
+    threejs-rails (0.0.2)
+      railties (>= 3.0.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -297,6 +304,7 @@ DEPENDENCIES
   spring
   spring-commands-rspec
   thin
+  threejs-rails!
   timecop
   uglifier
   web-console

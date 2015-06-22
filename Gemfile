@@ -17,6 +17,7 @@ gem "thin"
 gem "uglifier"
 gem "anadea-identity"
 gem "haml"
+gem 'threejs-rails', git: 'git://github.com/marvindanig/threejs-rails.git'
 
 group :development do
   gem "spring"
